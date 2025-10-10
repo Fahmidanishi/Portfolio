@@ -17,6 +17,10 @@ p, li, a {
     color: #ccc;
 }
 
+p {
+    margin-bottom: 10px;  /* reduced space after paragraphs */
+}
+
 a {
     text-decoration: none;
     color: #2667FF;
@@ -60,14 +64,14 @@ a:hover {
 
 /* Sections */
 .section {
-    padding: 60px 0;
+    padding: 30px 0;  /* reduced from 40px */
 }
 .section.bg-dark {
     background: #1a1a1a;
 }
 .section h2 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;  /* reduced from 20px */
     border-bottom: 2px solid #2667FF;
     display: inline-block;
     padding-bottom: 5px;
@@ -80,9 +84,9 @@ a:hover {
 /* Cards */
 .card {
     background: #222;
-    padding: 20px;
+    padding: 15px;       /* reduced from 20px */
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* reduced from 20px */
     transition: transform 0.3s;
 }
 .card:hover {
@@ -91,7 +95,7 @@ a:hover {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 15px;           /* slightly reduced */
 }
 
 /* Skills */
@@ -115,7 +119,7 @@ a:hover {
     background: #111;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 30px;   /* slightly reduced */
     font-size: 14px;
     color: #888;
 }
@@ -130,4 +134,34 @@ a:hover {
 }
 .card a:hover {
     color: #f79d00;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-photo img {
+    width: 150px;          
+    height: 150px;
+    object-fit: cover;     
+    border-radius: 50%;    
+    border: 3px solid #2667FF;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-photo img {
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
+    }
 }
