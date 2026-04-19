@@ -1,4 +1,4 @@
-update your portfolio, just run:
+update portfolio, just run:
 
 git add .
 git commit -m "Update portfolio"
